@@ -27,6 +27,9 @@
             get name() {
                 return this._name;
             }
+            get age(){
+                return this._age;
+            }
 
             set name(newName) {
                 this._name = newName;
@@ -63,18 +66,19 @@
         }
 
         const user = new User('Ana', 'ana@gmail.com', 24);
-        console.log(user.name); // se apeleaza getter-ul si afiseaza Ana
-        user.name = 'Alina'; // se apleleaza automat setter-ul daca este definit
-        console.log(user.name); // Alina
+        //console.log(user.name); // se apeleaza getter-ul si afiseaza Ana
+         //user.name = 'Alina'; // se apleleaza automat setter-ul daca este definit
+         //console.log(user.name); // Alina
         //console.log(user.#soldCard); //Error Private field '#soldCard' must be declared in an enclosing class
         //console.log(user.#alimenteazaCard()); //Error
 
-        user.getUserInfo();
-        const abonat = new Abonat('Ion','ion@ion.ro',30,'Internet')
-        console.log(abonat.name); // Ion 
-        abonat.name = 'Ionel';
-        console.log(abonat.name); // Ionel 
-        abonat.getUserInfo();
+         user.getUserInfo();
+         const abonat = new Abonat('Ion','ion@ion.ro',30,'Internet')
+         console.log(abonat.name); // Ion 
+         abonat.name = 'Ionel';
+         console.log(abonat.name); // Ionel 
+         //console.log(abonat.#soldCard)
+         abonat.getUserInfo();
 
     </script>
 </body>
