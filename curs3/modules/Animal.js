@@ -1,4 +1,4 @@
-class Animal{
+ class Animal{
     #familie;
     #mancare;
     #culoare;
@@ -28,5 +28,16 @@ class Animal{
         this.#mancare = mancare;
 
     }
-    
+    mananca(calorii){
+        this.greutate = this.greutate + calorii
+        console.log ( `Caloriile consumate azi sunt ${calorii} si greutatea actuala este ${this.greutate}`)
+    }
+    doarme(ore){
+        console.log(`Animalul doarme ${ore} pe zi`);
+    }
+    comunica(mesaj){
+        console.log(mesaj);
+    }
 }
+
+export {Animal}
