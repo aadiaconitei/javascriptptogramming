@@ -5,6 +5,9 @@ class Student2 {
         this.studCode = code;  
         this.studName = name;  
         }  
+    protected demo():void{
+        console.log('demo');
+    }
 }  
 class Person extends Student2 {  
     private department: string;  
@@ -12,7 +15,10 @@ class Person extends Student2 {
     constructor(code: number, name: string, department: string) {  
         super(code, name);  
         this.department = department;  
-    }  
+    } 
+    public demo():void{
+        console.log('demo');
+    } 
     public getElevatorPitch() {  
         return (`My unique code: ${this.studCode}, my name: ${this.studName} and I am in ${this.department} Branch.`);  
     }  

@@ -13,7 +13,8 @@
 const express = require('express')
 const app = express()
 // GET
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello World!!!!!'))
+app.get('/contact', (req, res) => res.send('Pagina de Contact'))
 
 
 // POST

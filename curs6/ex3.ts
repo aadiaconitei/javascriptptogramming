@@ -7,12 +7,12 @@ class Student {
             this.studCode = code;  
     }  
   
-    getGrade() : string {  
-        return "10" ;  
+    getGrade() : number {  
+        return 10 ;  
     }  
     //creating method or function   
     display():void {   
         console.log("Student studCode is: "+this.studCode)   
-        console.log("Student name is: "+this.studName)   
+        console.log(`Student name is: ${this.studName}`)   
     }   
 }  

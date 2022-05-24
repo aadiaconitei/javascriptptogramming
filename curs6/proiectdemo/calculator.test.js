@@ -3,10 +3,10 @@ const mathOperations = require('./calculator');
 describe("Calculator tests", () => {
  test('adding 1 + 2 should return 3', () => {
    // arrange and act
-   var result = mathOperations.sum(2,2)
+   var result = mathOperations.sum(4,2)
  
    // assert
-   expect(result).toBe(3);
+   expect(result).toBe(5);
  });
  
  test("subtracting 2 from 10 should return 8", () => {

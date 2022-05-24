@@ -60,7 +60,7 @@ $(document).ready(function ($) {
 
         let ajxReq = $.ajax({
             type: 'DELETE',
-            url: 'http://localhost:3001/users/1652778027417'
+            url: 'http://localhost:3001/user/1652778037046'
         });
 
         ajxReq.success(function (data, status, jqXhr) {
@@ -75,28 +75,23 @@ $(document).ready(function ($) {
 
     });
     $("#adauga").click(function (e) {
-
         let ajxReq = $.ajax({
             type: 'POST',
             data: {
-                "name": "teresa may5",
-                "password": "parliament5",
-                "profession": "brexit killer5",
-                "id": 5
+                "name": "Ion Ion",
+                "password": "ion123456",
+                "profession": "Tester",
+                "id": 6
             },
             url: 'http://localhost:3001/users'
         });
-
-        ajxReq.success(function (data, status, jqXhr) {
-            $("#message").append("Request is Success.");
-
-        });
-        ajxReq.error(function (jqXhr, textStatus, errorMessage) {
-            alert(errorMessage);
-            $("#message").append("Request is Fail.");
-        });
-
-
+        // ajxReq.success(function (data, status, jqXhr) {
+        //     $("#message").append("Request is Success.");
+        // });
+        // ajxReq.error(function (jqXhr, textStatus, errorMessage) {
+        //     alert(errorMessage);
+        //     $("#message").append("Request is Fail.");
+        // });
     });
 
     $("#editeaza").click(function (e) {
@@ -104,12 +99,12 @@ $(document).ready(function ($) {
         let ajxReq = $.ajax({
             type: 'PUT',
             data: {
-                "name": "Nume editat",
-                "password": "parolaeditat",
-                "profession": "profesieeditat",
-                "id": 1
+                "name": "Ion Editat",
+                "password": "Ionparolaeditat",
+                "profession": "Ionprofesieeditat",
+                "id": 6
             },
-            url: 'http://localhost:3001/users/1'
+            url: 'http://localhost:3001/user/1652975104567'
         });
 
         ajxReq.success(function (data, status, jqXhr) {

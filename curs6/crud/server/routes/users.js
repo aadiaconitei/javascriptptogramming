@@ -36,6 +36,7 @@ const userRoutes = (app, fs) => {
             res.send(JSON.parse(data));
         });
     });
+   
 
     // CREATE
     app.post('/users', (req, res) => {
@@ -57,7 +58,7 @@ const userRoutes = (app, fs) => {
 
 
     // UPDATE
-    app.put('/users/:id', (req, res) => {
+    app.put('/user/:id', (req, res) => {
 
         readFile(data => {
 
@@ -74,7 +75,7 @@ const userRoutes = (app, fs) => {
 
 
     // DELETE
-    app.delete('/users/:id', (req, res) => {
+    app.delete('/user/:id', (req, res) => {
 
         readFile(data => {
 

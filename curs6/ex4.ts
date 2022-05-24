@@ -4,8 +4,8 @@ interface Person {
     lastName: string;  
     age?: number;  //proprietate optionala
     getSalary: (number) => number;// arrow function
-    FullName();  
-    GetAge();  
+    FullName():any;  
+    GetAge():number;  
 }  
 // o clasa poate implementa mai multe interfete  
 class Employee implements Person {  
@@ -27,6 +27,7 @@ class Employee implements Person {
         this.firstName = firstN;  
         this.lastName = lastN;  
         this.age = getAge;  
+        this.salary=10000;
     }  
 }  
 // using the class that implements interface  

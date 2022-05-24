@@ -6,8 +6,6 @@ function fail() {
   return error("Something failed");
 }
 
-// function infiniteLoop(): never {
-//   while (true) {}
-// }
+
 
 fail();

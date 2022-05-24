@@ -1,6 +1,6 @@
 const mathOperations = {
     sum: function(a,b) {
-        return a + b;
+        return a + b -1;
     },
     
     diff: function(a,b) {
