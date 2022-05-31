@@ -23,7 +23,7 @@ $(document).ready(function ($) {
     // Adauga utilizator nou
     $('#addNewUser').click(function () {
         $('#userInserUpdateForm').trigger("reset");
-        $('#userModel').html("Adauga un user nou");
+        $('#userModel').html("Adauga un user nou !!!!!");
         $('#user-model').modal('show');
     });
     $.ajaxSetup({
@@ -43,7 +43,7 @@ $(document).ready(function ($) {
         //console.log(data);
         $('#example').dataTable({
             "paging": true,
-            "pageLength": 2,
+            "pageLength": 10,
             processing: true,
             serverSide: false,
             "data": data.data,
@@ -165,7 +165,7 @@ $(document).ready(function ($) {
             },
             complete: function () {
                 $('#user-model').modal('hide');
-                window.location.reload();
+               // window.location.reload();
             }
         });
     });

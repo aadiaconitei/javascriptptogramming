@@ -12,4 +12,16 @@ userRouter.get("/", async (req: Request, res: Response) => {
     res.status(200).json({"data": users});
   });
 });
+
+userRouter.post("/",jsonParser, async (req: Request, res: Response) => {
+  console.log(req.body);
+  const newUser: User = req.body;
+  userModel.create(newUser, (err: Error, userId: number) => {
+    if (err) {
+      return res.status(500).json({"message": err.message});
+    }
+
+    res.status(200).json({"userId": userId});
+  });
+});
 export {userRouter};
