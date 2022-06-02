@@ -46,6 +46,47 @@ export const create = (user: User, callback: Function) => {
     }
   );
 };
+export const findOne = (userId: number, callback: Function) => {
+  const queryString = `SELECT * FROM jsusers WHERE id=?`;
+  db.query(queryString, userId, (err, result) => {
+    if (err) {
+      callback(err);
+    }
 
+    const row = (<RowDataPacket>result)[0];
+    const user: User = {
+      id: row.id,
+      nume: row.nume,
+      prenume: row.prenume,
+      email: row.email,
+      datanastere: row.datanastere,
+      telefon: row.telefon,
+      //dataadaugare: row.dataadaugare,
+    };
+    callback(null, user);
+  });
+};
 
+// update user
+export const update = (user: User, callback: Function) => {
+  const queryString = `UPDATE jsusers SET nume=?, prenume=?, email=? WHERE id=?`;
+
+  db.query(queryString, [user.nume, user.prenume,user.email, user.id], (err, result) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null);
+  });
+};
+// update user
+export const deleteUser = (user: User, callback: Function) => {
+  const queryString = `DELETE FROM jsusers WHERE id=?`;
+
+  db.query(queryString,  [user.id], (err, result) => {
+    if (err) {
+      callback(err);
+    }
+    callback(null);
+  });
+};
 

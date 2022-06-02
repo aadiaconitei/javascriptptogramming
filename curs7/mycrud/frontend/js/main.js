@@ -79,7 +79,7 @@ $(document).ready(function ($) {
     //   Editeaza utilizator
     $('body').on('click', '.edit', function () {
         var id = $(this).data('id');
-        $('#userModel').html("Edit User");
+        $('#userModel').html("Edit User ?????");
         $('#btn-save').val("editUser");
         $('#user-model').modal('show');
         // ajax
@@ -94,7 +94,7 @@ $(document).ready(function ($) {
                  console.log(res.data.id);
                 
                 let datan= moment(res.data.datanastere).format('YYYY-MM-DD');  
-                alert(datan);
+                //
                 $('#id').val(res.data.id);
                 $('#lname').val(res.data.nume);
                 $('#fname').val(res.data.prenume);
